@@ -10,7 +10,7 @@
 
 #Prerequisites
 #Install-Module -Name AWS.Tools.Installer -SkipPublisherCheck -Force
-#install-awstoolsmodule aws.tools.common aws.tools.backup aws.tools.datasync aws.tools.ebs aws.tools.ec2 aws.tools.fsx aws.tools.s3 aws.tools.securitytoken -Force 
+#install-awstoolsmodule aws.tools.common aws.tools.datasync -Force 
 
 
 
