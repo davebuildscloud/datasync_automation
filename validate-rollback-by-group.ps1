@@ -1,3 +1,19 @@
+############################
+#
+# validate-rollback-by-group.ps1
+# Author:  Dave Stauffacher / davebuildscloud@gmail.com
+# Schedule:  Manual 
+# This script queries the last run status of groups of DataSync tasks by reading in a file containing a list of the tasks to query.
+# See example_group_file.txt to see how the file passed in to this script is formatted.
+#
+############################
+
+#Prerequisites
+#Install-Module -Name AWS.Tools.Installer -SkipPublisherCheck -Force
+#install-awstoolsmodule aws.tools.common aws.tools.datasync -Force 
+
+
+
 if ($args.count -lt 1)
 {
     Write-Host ""
