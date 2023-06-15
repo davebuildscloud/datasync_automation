@@ -1,3 +1,19 @@
+############################
+#
+# preserve-deleted-files.ps1
+# Author:  Dave Stauffacher / davebuildscloud@gmail.com
+# Schedule:  Manual 
+# This script scans all datasync tasks and updates the "Preserve Deleted Files" setting to "PRESERVE".
+# This setting will prevent a datasync task from removing a file from the destination that does not exist at the source.
+# This is especially helpful when a new filesystme has gone "live" but you still have data from the old file server to be copied to the new.
+#
+############################
+
+#Prerequisites
+#Install-Module -Name AWS.Tools.Installer -SkipPublisherCheck -Force
+#install-awstoolsmodule aws.tools.common aws.tools.datasync -Force 
+
+
 if ($args.count -lt 1)
 {
     Write-Host ""
