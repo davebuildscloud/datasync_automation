@@ -1,3 +1,21 @@
+############################
+#
+# stop-all-tasks.ps1
+# Author:  Dave Stauffacher / davebuildscloud@gmail.com
+# Schedule:  Manual 
+# This script stops all queued, pending, or running DataSync Tasks.
+# If you only want to stop tasks with a given name prefix, add the following
+# $task_prefix = “task-prefix-name”
+# $tasks = $tasks.where{$_.name -like $task_prefix* -and $_.name -NotLike "ROLLBACK*"}
+#
+############################
+
+#Prerequisites
+#Install-Module -Name AWS.Tools.Installer -SkipPublisherCheck -Force
+#install-awstoolsmodule aws.tools.common aws.tools.datasync -Force 
+
+
+
 $tasks = (Get-DSYNTaskList)
 
 #Stop tasks in queue first
