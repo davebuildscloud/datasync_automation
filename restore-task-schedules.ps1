@@ -1,3 +1,18 @@
+############################
+#
+# restore-task-schedules.ps1
+# Author:  Dave Stauffacher / davebuildscloud@gmail.com
+# Schedule:  Manual 
+# This script reads in the .csv file created by the remove-task-schedules.ps1 script and restores the deleted schedules for each task.
+#
+#
+############################
+
+#Prerequisites
+#Install-Module -Name AWS.Tools.Installer -SkipPublisherCheck -Force
+#install-awstoolsmodule aws.tools.common aws.tools.datasync -Force 
+
+
 if ($args.count -lt 1)
 {
     Write-Host ""
