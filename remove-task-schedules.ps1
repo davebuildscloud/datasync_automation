@@ -1,3 +1,19 @@
+############################
+#
+# remove-task-schedules.ps1
+# Author:  Dave Stauffacher / davebuildscloud@gmail.com
+# Schedule:  Manual 
+# This script scans all datasync tasks, sets their schedules to "", and exports their previous schedule settings to a .csv file 
+# This .csv file can be used with the restore-task-schedules.ps1 file to reinstate the previous schedules.
+#
+############################
+
+#Prerequisites
+#Install-Module -Name AWS.Tools.Installer -SkipPublisherCheck -Force
+#install-awstoolsmodule aws.tools.common aws.tools.datasync -Force 
+
+
+
 $backuparray = @()
 $validationarray =@()
 $task_prefix = “task-name-prefix”
