@@ -1,3 +1,18 @@
+############################
+#
+# remove-deleted-files.ps1
+# Author:  Dave Stauffacher / davebuildscloud@gmail.com
+# Schedule:  Manual 
+# This script scans all datasync tasks and updates the "Preserve Deleted Files" setting to "REMOVE".
+# This setting will allow a datasync task to remove a file from the destination that does not exist at the source.
+#
+############################
+
+#Prerequisites
+#Install-Module -Name AWS.Tools.Installer -SkipPublisherCheck -Force
+#install-awstoolsmodule aws.tools.common aws.tools.datasync -Force 
+
+
 if ($args.count -lt 1)
 {
     Write-Host ""
