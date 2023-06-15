@@ -1,3 +1,18 @@
+############################
+#
+# get_last_task_status.ps1
+# Author:  Dave Stauffacher / davebuildscloud@gmail.com
+# Schedule:  Manual 
+# This script scans all datasync tasks and returns information about the last time the task was run.
+# When run, it will return a formatted table with the task name, completion status, start time, and the duration (in seconds)
+#
+############################
+
+#Prerequisites
+#Install-Module -Name AWS.Tools.Installer -SkipPublisherCheck -Force
+#install-awstoolsmodule aws.tools.common aws.tools.datasync -Force 
+
+
 $myarray = @()
 $task_prefix = “task-prefix-name”
 $tasks = (Get-DSYNTaskList) 
