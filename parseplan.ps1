@@ -1,3 +1,14 @@
+############################
+#
+# parseplan.ps1
+# Author:  Dave Stauffacher / davebuildscloud@gmail.com
+# Schedule:  Manual 
+# This script takes in terraform plan output (in .txt format) and looks for items being changed and destroyed, providing a summary.
+# This tool has been useful when a terraform destroy wants to remove hundreds of objects, and you want to quickly know what those objects are.
+#
+############################
+
+
 {
     Write-Host ""
     Write-Host "**********************************************************"
